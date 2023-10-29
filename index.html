@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+
+        <!-- tab logo -->
+		<link rel="Shortcut Icon" type="image/JPEG" href="logos/QQCC-LOGOMEDIUM.png">
+        <!-- styles.css -->
+		<link rel="stylesheet" type="text/css" href="styles.css">	
+        <!-- index.js -->
+		<script src="index.js" defer></script>
+
+        <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.module.js"></script>
+        <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/jsm/controls/OrbitControls.js"></script>
+
+		
+	</head>
+
+    <!-- background color and font color -->
+    <body style="background-color: #0F8ED5; color: #fff;">
+    
+        <!-- navbar -->
+        <nav class="navbar_container">
+        
+            <!-- navbar logo -->
+            <div id="logo_image"><img src="logos/QQCC-LOGOLARGE.png"></div>
+            <!-- navbar title -->
+            <!-- <a href="index.html" id="navbar_title">Queen's Quantum Computing Club</a> -->
+            
+            <ul class="navbar_menu">
+                <li class="navbar_btn">
+                    <a href="index.html" class="button">Home
+                    </a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="about.html" class="button">About
+                    </a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="https://linktr.ee/queensqcc" class="button">Links
+                    </a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="projects.html" class="button">Projects
+                    </a>
+                </li>
+                
+            </ul>
+            <div id="navbarWhiteBar">
+
+            </div>
+        
+            
+        </nav>
+
+        <div class="name_container">
+            <h1>Queen's Quantum</h1>
+            <h1>Computing Club</h1>
+
+            <button class="scrollButton" onclick="document.querySelector('.cardTitle').scrollIntoView({ behavior: 'smooth', block: 'start'})">More About Quantum</button>
+            
+        </div>
+        
+
+        <div class="cardTitle" id="cardTitle1">
+            <h1>Meet Our Team!</h1>
+        </div>
+
+        <div class="card_container">
+            
+            <div class="card card1">
+                <h5>President</h5>
+            </div>
+            <div class="card_writeup">
+                <h1>Daniell Pan</h1>
+                <h5>As the Vice President of the Queen's Quantum Computing Club, 
+                    my goal is to assist members on expanding their knowledge in the Quantum Computing field.
+                    This year I will take on the responsibility of leading a hands-on project, 
+                    involving implementing software with hardware.
+                </h5>
+            </div>
+            
+        </div>
+
+        <div class="card_container card_container1">
+            
+            
+            <div class="card card2">
+                <h5>Vice President</h5>
+            </div>
+        </div>
+
+    </body> 
+	
+
+</html>

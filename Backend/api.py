@@ -5,7 +5,7 @@ import openai
 app = Flask(__name__)
 CORS(app)
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 @app.route('/ask-gpt', methods=['POST'])
 def ask_gpt_chat():

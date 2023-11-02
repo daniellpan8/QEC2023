@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import GptApi from './GptApi'; // Assuming QuestionForm.js is in the same directory
+import GptApi from './GptApi'; 
 
 function App() {
   return (

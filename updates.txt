@@ -1,0 +1,3 @@
+//avedis
+added the backend for the gpt api, current model is gpt 3.5 turbo
+created the react template for the site and have it running, added the started ui to test the gpt api, working well

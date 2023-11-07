@@ -4,75 +4,76 @@ import React, { useState } from 'react';
 const apiBaseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const GptApi = () => {
-  const [question, setQuestion] = useState('');
-  const [answer, setAnswer] = useState('');
-  const [loading, setLoading] = useState(false);
-  // Function to handle event button
-  const handleSubmit = async (event) => {
-    // stops button click
-    event.preventDefault();
-    // Call the function to submit the question
-    await submitQuestion();
-  };
+    const [question, setQuestion] = useState('');
+    const [answer, setAnswer] = useState('');
+    const [loading, setLoading] = useState(false);
+    // Function to handle event button
+    const handleSubmit = async (event) => {
+        // stops button click
+        event.preventDefault();
+        // Call the function to submit the question
+        await submitQuestion();
+    };
 
-  const handleQuestionChange = (event) => {
-    setQuestion(event.target.value);
-  };
+    const handleQuestionChange = (event) => {
+        setQuestion(event.target.value);
+    };
 
-  const submitQuestion = async () => {
-    setLoading(true);
-    //api structure
-    const messages = [
-      {
-        role: "system",
-        content: "You are a helpful assistant."
-      },
-      {
-        role: "user",
-        content: question //user question
-      }
-    ];
-  
-    try {
-      const response = await fetch(`${apiBaseUrl}/ask-gpt`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ messages }), 
-      });
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const result = await response.json();
-      setAnswer(result.message); 
-    } catch (error) {
-      console.log('Fetch error:', error);
-      setAnswer('Sorry, an error occurred.');
-    } finally {
-      setLoading(false);
-    }
-  };
+    const submitQuestion = async () => {
+        setLoading(true);
+        //api structure
+        const messages = [
+            {
+                role: "system",
+                content: "You are a helpful assistant."
+            },
+            {
+                role: "user",
+                content: question //user question
+            }
+        ];
 
-  return (
-    <div class='content-page'>
-      <h1>Ask GPT</h1>
-      <form class='c-para' onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={question}
-          onChange={handleQuestionChange}
-          placeholder="Ask a question..."
-        />
-        <button type="submit" disabled={loading}>
-          {loading ? 'Asking...' : 'Ask'}
-        </button>
-      </form>
-      <p class='c-para'>Answer: {answer}</p>
-      </div>
-  );
+        try {
+            const response = await fetch(`${apiBaseUrl}/ask-gpt`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ messages }),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            setAnswer(result.message);
+        } catch (error) {
+            console.log('Fetch error:', error);
+            setAnswer('Sorry, an error occurred.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div class='content-page'>
+            <h1>Ask GPT</h1>
+            <form class='flex justify-center items-center' onSubmit={handleSubmit}>
+                <input
+                    class='input'
+                    type="text"
+                    value={question}
+                    onChange={handleQuestionChange}
+                    placeholder="Ask a question..."
+                />
+                <button class='button' type="submit" disabled={loading}>
+                    {loading ? 'Asking...' : 'Ask'}
+                </button>
+            </form>
+            <p class='c-para'>Answer: {answer}</p>
+        </div>
+    );
 };
 
 export default GptApi;

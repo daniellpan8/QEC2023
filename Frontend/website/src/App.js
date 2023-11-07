@@ -8,20 +8,20 @@ import Navbar from './components/Navbar'
 import GptApi from './GptApi';
 
 function App() {
-  return (
-      <div class='h-screen w-screen bg-gray-200'>
-        <Navbar/>
-        <div class='h-full'>
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Home/>} />
-                    <Route path='/about' element={<About/>} />
-                    <Route path='/askgpt' element={<GptApi/>} />
-                </Routes>
-            </BrowserRouter>
+    return (
+        <div class='h-screen w-screen bg-gray-200'>
+            <Navbar />
+            <div class='h-full'>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/askgpt' element={<GptApi />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </div>
-      </div>
-  );
+    );
 }
 
 export default App;

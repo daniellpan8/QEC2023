@@ -4,20 +4,31 @@
 
 @layer base {
     h1 {
-        @apply text-xl p-4;
+        @apply text-xl py-4;
     }
     p {
-        @apply text-base;
+        @apply text-base px-3;
     }
 }
 
 @layer components {
+
     .content-page {
-        @apply flex-col justify-center max-w-prose mx-auto;
+        @apply flex-col justify-center mx-auto max-w-3xl ;
     }
+
     .c-para{
-        @apply border-gray-400 shadow rounded-l p-4 my-2;
+        @apply border-gray-400 shadow rounded-md px-4 py-2 my-2 bg-gray-100 bg-opacity-50 text-black blur-2xl;
     }
+
+    .button {
+        @apply text-white bg-indigo-800 mx-1 px-2 rounded-md;
+    }
+    
+    .input {
+        @apply text-black rounded-md px-2 mx-1
+    }
+    
 }
 
 body {

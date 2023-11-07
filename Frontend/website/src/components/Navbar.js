@@ -15,7 +15,7 @@ function classNames(...classes) {
 export default function Navbar() {
     const pathname = window.location.pathname;
     return (
-        <Disclosure as="nav" className="bg-gray-800 shadow-lg">
+        <Disclosure as="nav" className="sticky top-0 bg-gray-800 shadow-lg">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">

@@ -9,16 +9,18 @@ import GptApi from './GptApi';
 
 function App() {
     return (
-        <div className='h-screen w-screen bg-gray-200'>
-            <Navbar />
-            <div className='h-full'>
-                <BrowserRouter>
-                    <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/about' element={<About />} />
-                        <Route path='/askgpt' element={<GptApi />} />
-                    </Routes>
-                </BrowserRouter>
+        <div className='h-screen w-screen bg-gray-200 mb-10'>
+            <div className='h-max bg-gray-200'>
+                <Navbar />
+                <div>
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/about' element={<About />} />
+                            <Route path='/askgpt' element={<GptApi />} />
+                        </Routes>
+                    </BrowserRouter>
+                </div>
             </div>
         </div>
     );

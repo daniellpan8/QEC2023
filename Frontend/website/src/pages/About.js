@@ -2,8 +2,9 @@ import React from 'react';
 
 function About() {
     return(
-        <div className='content-page'>
-            <h2> About </h2>
+        <div class='content-page'>
+            <h1> About </h1>
+            <p class='c-para'> somet text here </p>
         </div>
     );
 }

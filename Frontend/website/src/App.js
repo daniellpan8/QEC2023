@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
 import './index.css'
 
 import Home from './pages/Home';
@@ -8,18 +7,19 @@ import About from './pages/About';
 import Navbar from './components/Navbar'
 import GptApi from './GptApi';
 
-
 function App() {
   return (
-      <div className="App">
+      <div class='h-screen w-screen bg-gray-200'>
         <Navbar/>
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home/>} />
-                <Route path='/about' element={<About/>} />
-                <Route path='/askgpt' element={<GptApi/>} />
-            </Routes>
-        </BrowserRouter>
+        <div class='h-full'>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Home/>} />
+                    <Route path='/about' element={<About/>} />
+                    <Route path='/askgpt' element={<GptApi/>} />
+                </Routes>
+            </BrowserRouter>
+        </div>
       </div>
   );
 }

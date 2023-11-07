@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css'
 
 // Make sure REACT_APP_API_URL is set in your .env file
 const apiBaseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
@@ -58,12 +57,10 @@ const GptApi = () => {
   };
 
   return (
-    <div className="content-page">
-      <h2>Ask GPT</h2>
-      <div className="input-outer">
-      <form onSubmit={handleSubmit}>
+    <div class='content-page'>
+      <h1>Ask GPT</h1>
+      <form class='c-para' onSubmit={handleSubmit}>
         <input
-          className="input-inner"
           type="text"
           value={question}
           onChange={handleQuestionChange}
@@ -73,9 +70,8 @@ const GptApi = () => {
           {loading ? 'Asking...' : 'Ask'}
         </button>
       </form>
-      <p>Answer: {answer}</p>
+      <p class='c-para'>Answer: {answer}</p>
       </div>
-    </div>
   );
 };
 

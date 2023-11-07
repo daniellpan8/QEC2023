@@ -57,21 +57,21 @@ const GptApi = () => {
     };
 
     return (
-        <div class='content-page'>
+        <div className='content-page'>
             <h1>Ask GPT</h1>
-            <form class='flex justify-center items-center' onSubmit={handleSubmit}>
+            <form className='flex justify-center items-center' onSubmit={handleSubmit}>
                 <input
-                    class='input'
+                    className='input'
                     type="text"
                     value={question}
                     onChange={handleQuestionChange}
                     placeholder="Ask a question..."
                 />
-                <button class='button' type="submit" disabled={loading}>
+                <button className='button' type="submit" disabled={loading}>
                     {loading ? 'Asking...' : 'Ask'}
                 </button>
             </form>
-            <p class='c-para'>Answer: {answer}</p>
+            <p className='c-para'>Answer: {answer}</p>
         </div>
     );
 };

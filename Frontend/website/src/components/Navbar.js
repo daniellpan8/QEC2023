@@ -13,6 +13,7 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+    const pathname = window.location.pathname;
     return (
         <Disclosure as="nav" className="bg-gray-800 shadow-lg">
             {({ open }) => (
@@ -31,7 +32,7 @@ export default function Navbar() {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className='text-base text-gray-100 inset-y-sm'>
+                            <div className='text-base text-gray-100'>
                                 <h1><a href='http://avedisboudakian.com'>AvedisBoudakian.com</a></h1>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
@@ -42,10 +43,10 @@ export default function Navbar() {
                                                 key={item.name}
                                                 href={item.href}
                                                 className={classNames(
-                                                    window.location.pathname === item.href ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-600 hover:text-white',
+                                                    pathname === item.href ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-600 hover:text-white',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
                                                 )}
-                                                aria-current={window.location.pathname === item.href ? 'page' : undefined}
+                                                aria-current={pathname === item.href ? 'page' : undefined}
                                             >
                                                 {item.name}
                                             </a>

@@ -9,9 +9,9 @@ import GptApi from './GptApi';
 
 function App() {
     return (
-        <div class='h-screen w-screen bg-gray-200'>
+        <div className='h-screen w-screen bg-gray-200'>
             <Navbar />
-            <div class='h-full'>
+            <div className='h-full'>
                 <BrowserRouter>
                     <Routes>
                         <Route path='/' element={<Home />} />

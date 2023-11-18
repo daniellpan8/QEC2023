@@ -1,0 +1,166 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kanit', sans-serif;
+}
+
+.navbar {
+	background-image: linear-gradient(to bottom, #282A35 0%, #000 100%);
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+/*top navbar container*/
+.navbar_container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1500px;
+	margin: 0 0;
+	padding: 0 0;
+}
+
+.navbarWhiteBar {
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+}
+
+/*logo image*/
+#logo_image img {
+    max-width: 46px;
+    max-height: 46px;
+    opacity: 100%;
+    margin: 16px;
+    margin-top: 18px;
+    margin-right: 400px;
+	filter: grayscale(1) invert(0.7);
+}
+
+/*logo name*/
+#navbar_logo {
+	margin-left: 76px;
+	background-color: #bfbdbd;
+	background-image: linear-gradient(to top, #6e6e6e 0%, #fff 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	cursor: help;
+	text-decoration: none;
+	font-size: 3rem;
+	position: absolute;
+}
+
+/*name logo hover features*/
+#navbar_logo:hover {
+	background-image: linear-gradient(to top, #000 0%, #1a1a1a 100%);
+	transition: color 1s ease, background-image 1s ease;
+}
+
+.fa-gem {
+	margin-right: 0.5rem;
+}
+
+.navbar_menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+}
+
+.navbar_item {
+	height: 80px;
+}
+
+.navbar_links {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+}
+
+.navbar_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	padding: 0 0;
+	width: 100%;
+	text-decoration: none;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+	/* padding: top, sides */
+	padding: 5px 20px;
+	height: 100%;
+	width: 100px;
+	outline: none;
+	border-radius: 40px;
+	background: #bfbdbd;
+	background: linear-gradient(to top, #000 0%, #bfbdbd 100%);
+	color: #000;
+	text-decoration: none;
+	border-style: solid;
+	border-color: #1a1a1a;
+	border-width: 4px;
+	transition: all 1s ease;
+	transition: color 1s ease;
+}
+
+.button2 {
+	background: #fff;
+	background: linear-gradient(to top, #E0115F 0%, #FCA3B7 100%);
+	color: #fff;
+	border-color: #E0115F;
+
+}
+
+.button:hover {
+	color: #fff;
+	background: linear-gradient(to top, #000 0%, #1a1a1a 100%);
+}
+
+.button2:hover {
+	color: #E0115F;
+	background: linear-gradient(to top, #F64A8A 0%, #fff 100%);;
+}
+
+.navbar_links:hover {
+	color: #282A35;
+	transition: all 5s ease;
+}
+
+.body_container {
+	display: block;
+    position: relative;
+    z-index: 3;
+    max-height: 1080px;
+    max-width: 1920px;
+    color: #bfbdbd;
+    align-items: center;
+    justify-content: center;
+    
+}

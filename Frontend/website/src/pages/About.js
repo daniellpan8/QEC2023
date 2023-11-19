@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// about us page highlighting synthai's previous accomplishments as well as out current mission to help potential patients and hospitals
 function About() {
     return (
         <div className='content-page'>

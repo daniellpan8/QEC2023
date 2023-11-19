@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import logoImage from './synthailogo.png';
+import logoImage from './synthailogo.png'; //import company logo
+
+//homepage that has the synthai logo as well as a button to our pre screening feature
 const Home = () => {
     return (
         <div className="bg-gray-100 text-black min-h-screen flex flex-col items-center justify-center">

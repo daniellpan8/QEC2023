@@ -5,7 +5,7 @@ import './index.css'
 import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './components/Navbar'
-import GptApi from './GptApi';
+import GptApi from './PreScreen';
 
 function App() {
     return (
@@ -17,7 +17,7 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/about' element={<About />} />
-                            <Route path='/askgpt' element={<GptApi />} />
+                            <Route path='/prescreen' element={<GptApi />} />
                         </Routes>
                     </BrowserRouter>
                 </div>

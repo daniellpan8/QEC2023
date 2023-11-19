@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'AskGPT', href: '/askgpt' },
+    { name: 'Pre-Screen', href: '/prescreen' },
 ]
 
 function classNames(...classes) {
@@ -15,7 +15,7 @@ function classNames(...classes) {
 export default function Navbar() {
     const pathname = window.location.pathname;
     return (
-        <Disclosure as="nav" className="sticky top-0 bg-gray-800 shadow-lg">
+        <Disclosure as="nav" className="sticky top-0 bg-blue-500 shadow-lg">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-6xl px-2 sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ export default function Navbar() {
                                 </Disclosure.Button>
                             </div>
                             <div className='text-base text-gray-100'>
-                                <h1><a href='http://avedisboudakian.com'>AvedisBoudakian.com</a></h1>
+                                <h1><a href='/'>SynthAI</a></h1>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
                                 <div className="hidden sm:ml-6 sm:block">

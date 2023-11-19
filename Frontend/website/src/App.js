@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Navbar from './components/Navbar'
 import GptApi from './PreScreen';
-
+//main app that routes all of our pages together 
 function App() {
     return (
         <div className='h-screen w-screen bg-gray-200 mb-10'>

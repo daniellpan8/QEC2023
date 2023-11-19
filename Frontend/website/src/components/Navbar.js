@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+//naviagation panel to route to different pages
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -11,7 +11,7 @@ const navigation = [
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
-
+//nav bar function with text as well as css that allows us to changing pagees freely
 export default function Navbar() {
     const pathname = window.location.pathname;
     return (
